@@ -1,12 +1,40 @@
-1. The code to train a helpful only model preference model is Reward_model_preference_model_helpful_antrophic_dataset_Qwen_0_6B.ipynb
-It can be found on hugginface Realmbird/helpfulness-preference-model-qwen-0.6B-merged
+This project details the process of training a constitutional AI model used Qwen-0.6B
+1. Reward Model Training
 
-2. Code to train the RLHF helpful only ppo model is Helpful_RLHF_Qwen_0_6B_ipynb.ipynb
-The model can be found on huggingface Realmbird/rlhf-helpful-only-qwen-0.6b
+    Code: Reward_model_preference_model_helpful_antrophic_dataset_Qwen_0_6B.ipynb
 
-3. The code to use the helpful only model to create the critique and revisions is Direct_critique_response_Creating_Dataset_of_responses_to_red_teaming_prompts.ipynb
-The dataset can be found Realmbird/sl_cai_dataset_100
-// Only generated first 100 critique and revisions due to compute constraints
+    Description: This notebook contains the code used to train the preference model, which serves as the reward model for RLHF. It was trained on the Anthropic helpfulness dataset to learn what constitutes a helpful response.
+
+    Model: The trained reward model is available on the Hugging Face Hub.
+
+        Repository: Realmbird/helpfulness-preference-model-qwen-0.6B-merged
+
+2. RLHF PPO Model Training
+
+    Code: Helpful_RLHF_Qwen_0_6B_ipynb.ipynb
+
+    Description: This notebook details the RLHF training process using Proximal Policy Optimization (PPO). The helpfulness-preference-model (the reward model from step 1) was used to guide the training of the base Qwen-0.6B model, enabling it to generate more helpful outputs.
+
+    Model: The final RLHF-trained model is available on the Hugging Face Hub.
+
+        Repository: Realmbird/rlhf-helpful-only-qwen-0.6b
+
+3. Direct Critique and Revision Generation
+
+    Code: Direct_critique_response_Creating_Dataset_of_responses_to_red_teaming_prompts.ipynb
+
+    Description: This notebook demonstrates how to use the RLHF-trained model to generate critiques and revisions for a given dataset. It was used to create a new dataset of critiques to assess the model's capabilities in a "red teaming" context.
+The Critique and revisions were taken directly from the papers listed examples.
+
+    Dataset: The generated dataset of critiques and revisions can be found on the Hugging Face Hub.
+
+        Repository: Realmbird/sl_cai_dataset_100
+
+    Note: Only the first 100 entries were generated due to computational resource constraints. This serves as a proof of concept for the model's ability to generate structured and helpful critiques.
+
+
+
+
 
 
 
