@@ -1,1 +1,12 @@
+1. The code to train a helpful only model preference model is Reward_model_preference_model_helpful_antrophic_dataset_Qwen_0_6B.ipynb
+It can be found on hugginface Realmbird/helpfulness-preference-model-qwen-0.6B-merged
+
+2. Code to train the RLHF helpful only ppo model is Helpful_RLHF_Qwen_0_6B_ipynb.ipynb
+The model can be found on huggingface Realmbird/rlhf-helpful-only-qwen-0.6b
+
+3. The code to use the helpful only model to create the critique and revisions is Direct_critique_response_Creating_Dataset_of_responses_to_red_teaming_prompts.ipynb
+The dataset can be found Realmbird/sl_cai_dataset_100
+// Only generated first 100 critique and revisions due to compute constraints
+
+
 
